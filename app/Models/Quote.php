@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Quote extends Model
 {
-    use HasFactory;
+	protected $fillable = ['name', 'slug', 'thumbnail'];
+
+	use HasFactory;
 }

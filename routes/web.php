@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PostController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AdminQuoteController;
 
@@ -18,10 +17,11 @@ use App\Http\Controllers\AdminQuoteController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/posts/post', [PostController::class, 'index']);
+// Route::get('/quotes/{quote:slug}', [HomeController::class, 'show']);
 
 Route::get('login', [AdminController::class, 'create'])->middleware('guest');
 Route::post('login', [AdminController::class, 'store'])->middleware('guest');
 Route::post('logout', [AdminController::class, 'destroy'])->middleware('auth');
 
-Route::post('/quotes/quote/create', [AdminQuoteController::class, 'index'])->middleware('auth');
+Route::get('quotes/quote/create', [AdminQuoteController::class, 'index'])->middleware('auth');
+Route::post('quotes/quote/create', [AdminQuoteController::class, 'create'])->middleware('auth');

@@ -16,9 +16,9 @@
 </style>
 
 <body style="font-family: Open Sans, sans-serif">
-    @auth
-        <header class="flex flex-row gap-4">
-            Welcome, {{auth()->user()->name}}!
+        <header class="flex flex-row gap-4 bg-blue-500 h-50">
+            @auth
+            <h1>Welcome, {{auth()->user()->name}}!</h1>
             <a href="/quotes/quote/create">Create Quote</a>
             <form action="/logout" method="POST">
                 @csrf
@@ -26,7 +26,8 @@
             </form>
             @else
             <a href="/login">Login</a>
+            @endauth
+            <a href="/" class="ml-3">Home Page</a>
         </header>
-    @endauth
     {{$slot}}
 </body>

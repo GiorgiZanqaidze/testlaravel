@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+use App\Models\Quote;
 
 class HomeController extends Controller
 {
 	public function index()
 	{
-		return view('index', ['user' => User::inRandomOrder()->first()]);
+		return view('index', ['quote' => Quote::inRandomOrder()->first()]);
 	}
+
+	// public function show(Quote $quote)
+	// {
+	// 	return view('quote', ['quote' => $quote]);
+	// }
 }
