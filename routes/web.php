@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
-use App\Models\User;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AdminQuoteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +17,11 @@ use App\Models\User;
 |
 */
 
-Route::get('/', function () {
-	return view('index', [
-		'users' => User::all(),
-	]);
-});
+Route::get('/', [HomeController::class, 'index']);
 Route::get('/posts/post', [PostController::class, 'index']);
+
+Route::get('login', [AdminController::class, 'create'])->middleware('guest');
+Route::post('login', [AdminController::class, 'store'])->middleware('guest');
+Route::post('logout', [AdminController::class, 'destroy'])->middleware('auth');
+
+Route::post('/quotes/quote/create', [AdminQuoteController::class, 'index'])->middleware('auth');
