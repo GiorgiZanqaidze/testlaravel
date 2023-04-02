@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function index(User $user) 
+    public function index(User $user)
     {
         return view('post', ['user' => $user]);
     }

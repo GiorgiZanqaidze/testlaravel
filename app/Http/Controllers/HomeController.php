@@ -8,7 +8,6 @@ use App\Models\User;
 class HomeController extends Controller
 {
     public function index()
-
     {
         // dd(User::all());
     //     return view('index', [
