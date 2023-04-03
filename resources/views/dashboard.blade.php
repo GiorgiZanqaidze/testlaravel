@@ -10,16 +10,19 @@
                             <img src="/storage/{{$quote->thumbnail}}" alt="" width="50px"/>
                         </th>
                         <td class="px-6 py-4">
-                            <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
+                            <form action="/quotes/quote/{{$quote->slug}}/delete" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</button>
+                            </form>
                         </td>
                         <td class="px-6 py-4">
-                            <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                            <a href="/quotes/quote/{{$quote->slug}}/edit" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
-
         @endforeach
     @endif
 

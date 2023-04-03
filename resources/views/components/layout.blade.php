@@ -24,10 +24,20 @@
                 @csrf
                 <button href="/logout">LogOut<button>
             </form>
+            <a href="/dashboard" class="ml-3 mr-3">Dashboard</a>
             @else
             <a href="/login">Login</a>
             @endauth
             <a href="/" class="ml-3">Home Page</a>
         </header>
-    {{$slot}}
+        <main class='flex min-h-screen gap-20'>
+            <aside class="flex items-center flex-col justify-center gap-4 m-4">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">EN</button>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">KA</button>
+            </aside>
+            <div class="flex min-h-screen justify-center bg-red-500 items-center">
+                {{$slot}}
+            </div>
+        </main>
 </body>
+

@@ -26,3 +26,6 @@ Route::get('dashboard', [AdminController::class, 'show'])->middleware('auth');
 
 Route::get('quotes/quote/create', [AdminQuoteController::class, 'index'])->middleware('auth');
 Route::post('quotes/quote/create', [AdminQuoteController::class, 'create'])->middleware('auth');
+Route::get('quotes/quote/{quote:slug}/edit', [AdminQuoteController::class, 'show'])->middleware('auth');
+Route::patch('quotes/quote/{quote:slug}/edit', [AdminQuoteController::class, 'edit'])->middleware('auth');
+Route::delete('quotes/quote/{quote:slug}/delete', [AdminQuoteController::class, 'delete'])->middleware('auth');

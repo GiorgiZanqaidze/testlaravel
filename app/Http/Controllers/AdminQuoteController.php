@@ -25,4 +25,29 @@ class AdminQuoteController extends Controller
 
 		return redirect('/');
 	}
+
+	public function show(Quote $quote)
+	{
+		return view('edit', ['quote' => $quote]);
+	}
+
+	public function edit()
+	{
+		$attributes = request()->validate([
+			'name'      => 'required|min:3',
+			'slug'      => ['required', Rule::unique('quotes', 'slug')],
+			'thumbnail' => 'required|image',
+		]);
+		$attributes['thumbnail'] = request()->file('thumbnail')->store('thumbnail');
+
+		Quote::create($attributes);
+
+		return redirect('/');
+	}
+
+	public function delete(Quote $quote)
+	{
+		$quote->delete();
+		return redirect('/dashboard');
+	}
 }

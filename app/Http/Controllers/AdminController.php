@@ -41,4 +41,6 @@ class AdminController extends Controller
 	{
 		return view('dashboard', ['quotes' => Quote::all()]);
 	}
+
+	
 }
