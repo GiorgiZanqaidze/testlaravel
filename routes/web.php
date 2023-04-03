@@ -17,11 +17,12 @@ use App\Http\Controllers\AdminQuoteController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-// Route::get('/quotes/{quote:slug}', [HomeController::class, 'show']);
+Route::get('/quotes/{quote:slug}', [HomeController::class, 'show']);
 
 Route::get('login', [AdminController::class, 'create'])->middleware('guest');
 Route::post('login', [AdminController::class, 'store'])->middleware('guest');
 Route::post('logout', [AdminController::class, 'destroy'])->middleware('auth');
+Route::get('dashboard', [AdminController::class, 'show'])->middleware('auth');
 
 Route::get('quotes/quote/create', [AdminQuoteController::class, 'index'])->middleware('auth');
 Route::post('quotes/quote/create', [AdminQuoteController::class, 'create'])->middleware('auth');

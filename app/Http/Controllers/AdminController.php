@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Validation\ValidationException;
+use App\Models\Quote;
 
 class AdminController extends Controller
 {
@@ -34,5 +35,10 @@ class AdminController extends Controller
 	{
 		auth()->logout();
 		return redirect('/');
+	}
+
+	public function show()
+	{
+		return view('dashboard', ['quotes' => Quote::all()]);
 	}
 }

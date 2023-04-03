@@ -11,8 +11,8 @@ class HomeController extends Controller
 		return view('index', ['quote' => Quote::inRandomOrder()->first()]);
 	}
 
-	// public function show(Quote $quote)
-	// {
-	// 	return view('quote', ['quote' => $quote]);
-	// }
+	public function show(Quote $quote)
+	{
+		return view('quote', ['quote' => $quote]);
+	}
 }
