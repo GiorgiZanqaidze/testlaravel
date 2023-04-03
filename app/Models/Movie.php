@@ -5,14 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Quote extends Model
+class Movie extends Model
 {
-	protected $fillable = ['name'];
-
 	use HasFactory;
 
-	public function movie()
+	public function quotes()
 	{
-		return $this->belongsTo(Movie::class);
+		return $this->hasMany(Quote::class);
 	}
 }
