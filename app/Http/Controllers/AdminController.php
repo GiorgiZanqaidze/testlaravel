@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Movie;
 use Illuminate\Validation\ValidationException;
-use App\Models\Quote;
 
 class AdminController extends Controller
 {
@@ -39,8 +39,6 @@ class AdminController extends Controller
 
 	public function show()
 	{
-		return view('dashboard', ['quotes' => Quote::all()]);
+		return view('dashboard', ['movies' => Movie::all()]);
 	}
-
-	
 }

@@ -17,15 +17,15 @@ use App\Http\Controllers\AdminQuoteController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/quotes/{quote:slug}', [HomeController::class, 'show']);
+Route::get('/movies/{movie:slug}', [HomeController::class, 'show']);
 
 Route::get('login', [AdminController::class, 'create'])->middleware('guest');
 Route::post('login', [AdminController::class, 'store'])->middleware('guest');
 Route::post('logout', [AdminController::class, 'destroy'])->middleware('auth');
 Route::get('dashboard', [AdminController::class, 'show'])->middleware('auth');
 
-Route::get('quotes/quote/create', [AdminQuoteController::class, 'index'])->middleware('auth');
-Route::post('quotes/quote/create', [AdminQuoteController::class, 'create'])->middleware('auth');
-Route::get('quotes/quote/{quote:slug}/edit', [AdminQuoteController::class, 'show'])->middleware('auth');
-Route::patch('quotes/quote/{quote:slug}/edit', [AdminQuoteController::class, 'edit'])->middleware('auth');
-Route::delete('quotes/quote/{quote:slug}/delete', [AdminQuoteController::class, 'delete'])->middleware('auth');
+Route::get('movies/movie/create', [AdminQuoteController::class, 'index'])->middleware('auth');
+Route::post('movies/movie/create', [AdminQuoteController::class, 'create'])->middleware('auth');
+Route::get('movies/movie/{movie:slug}/edit', [AdminQuoteController::class, 'show'])->middleware('auth');
+Route::patch('movies/movie/{movie:slug}/edit', [AdminQuoteController::class, 'edit'])->middleware('auth');
+Route::delete('movies/movie/{movie:slug}/delete', [AdminQuoteController::class, 'delete'])->middleware('auth');

@@ -19,7 +19,7 @@
         <header class="flex flex-row gap-4 bg-blue-500 h-50">
             @auth
             <h1>Welcome, {{auth()->user()->name}}!</h1>
-            <a href="/quotes/quote/create">Create Quote</a>
+            <a href="/movies/movie/create">Create Movie</a>
             <form action="/logout" method="POST">
                 @csrf
                 <button href="/logout">LogOut<button>
@@ -35,7 +35,7 @@
                 <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">EN</button>
                 <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">KA</button>
             </aside>
-            <div class="flex min-h-screen justify-center bg-red-500 items-center">
+            <div class="flex flex-col min-h-screen justify-center items-center">
                 {{$slot}}
             </div>
         </main>
