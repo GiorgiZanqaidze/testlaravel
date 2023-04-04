@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Quote;
+use App\Models\Movie;
 
 class HomeController extends Controller
 {
 	public function index()
 	{
-		return view('index', ['quote' => Quote::inRandomOrder()->first()]);
+		return view('index', ['movie' => Movie::inRandomOrder()->first()]);
 	}
 
-	public function show(Quote $quote)
+	public function show(Movie $movie)
 	{
-		return view('quote', ['quote' => $quote]);
+		return view('quote', ['movie' => $movie]);
 	}
 }

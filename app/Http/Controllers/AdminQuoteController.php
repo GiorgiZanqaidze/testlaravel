@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Quote;
+use App\Models\Movie;
 use Illuminate\Validation\Rule;
 
 class AdminQuoteController extends Controller
@@ -15,13 +16,13 @@ class AdminQuoteController extends Controller
 	public function create()
 	{
 		$attributes = request()->validate([
-			'name'      => 'required|min:3',
-			'slug'      => ['required', Rule::unique('quotes', 'slug')],
-			'thumbnail' => 'required|image',
+			'title'      => 'required|min:3',
+			'slug'       => 'required',
+			'thumbnail'  => 'required|image',
 		]);
 		$attributes['thumbnail'] = request()->file('thumbnail')->store('thumbnail');
 
-		Quote::create($attributes);
+		Movie::create($attributes);
 
 		return redirect('/');
 	}

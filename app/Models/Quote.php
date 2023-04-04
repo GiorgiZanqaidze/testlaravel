@@ -9,10 +9,12 @@ class Quote extends Model
 {
 	protected $fillable = ['name'];
 
+	protected $guarded = [];
+
 	use HasFactory;
 
 	public function movie()
 	{
-		return $this->belongsTo(Movie::class);
+		return $this->belongsTo(Movie::class, 'movie_id');
 	}
 }

@@ -9,6 +9,10 @@ class Movie extends Model
 {
 	use HasFactory;
 
+	protected $fillable = ['title', 'slug', 'thumbnail'];
+
+	protected $guarded = [];
+
 	public function quotes()
 	{
 		return $this->hasMany(Quote::class);
