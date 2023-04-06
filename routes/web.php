@@ -29,3 +29,5 @@ Route::post('movies/movie/create', [AdminQuoteController::class, 'create'])->mid
 Route::get('movies/movie/{movie:slug}/edit', [AdminQuoteController::class, 'show'])->middleware('auth');
 Route::patch('movies/movie/{movie:slug}/edit', [AdminQuoteController::class, 'edit'])->middleware('auth');
 Route::delete('movies/movie/{movie:slug}/delete', [AdminQuoteController::class, 'delete'])->middleware('auth');
+
+Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => '\App\Http\Controllers\LanguageController@switchLang']);
