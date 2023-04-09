@@ -10,7 +10,6 @@ E Space also gives opportunity to business with giving them **Business Module** 
 * [Getting Started](#getting-started)
 * [Migrations](#migration)
 * [Development](#development)
-* [Deployment with CI / CD](#deployment-with-ci-\-cd)
 * [Project Structure](#project-structure)
 * [Service Interaction Map](#service-interaction-map)
 * [Server Infrastructure](#server-infrastructure)
