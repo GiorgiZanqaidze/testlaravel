@@ -146,7 +146,6 @@ Project structure is fairly straitforward(at least for laravel developers)...
 
 For more information about project standards, take a look at these docs:
 * [Laravel](https://laravel.com/docs/6.x)
-* [Nova](https://nova.laravel.com/)
 
 Aside from laravel/nova specific structure here are some of the key points that worth pointing out.
 
