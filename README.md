@@ -115,23 +115,6 @@ If you want to watch files during development, execute instead:
 it will watch JS files and on change it'll rebuild them, so you don't have to manually build them.
 
 
-#
-### Deployment with CI \ CD
-<br/>
-
-!["CI / CD"](./readme/assets/cicd.png)
-
-<br />
-
-Continues Development / Continues Integration & Deployment steps:
-* CI \ CD process first step is of course is development.
-* After some time of development when you are ready to integrate and deploy your feature/fix/work you make a commit or pull request to gihub branch.
-* That triggers github action which listens to pull requests and commits on development and master branch. Github actions will set up configure project, run unit tests.
-* If unit tests fail, you go a head and do some fixing and aftermath try again.
-* If unit tests succeed then github actions will deploy your code to development or production server according to the branch you are making commit to.
-* After deploying, github actions script will build your code and run migrations all to be up to date.
-
-Then everything should be OK :pray:
 
 #
 ### Project Structure
