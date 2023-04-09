@@ -9,9 +9,9 @@ class Movie extends Model
 {
 	use HasFactory;
 
-	protected $fillable = ['title', 'slug', 'thumbnail'];
+	protected $fillable = ['title', 'slug'];
 
-	protected $guarded = [];
+	public $translatable = ['title'];
 
 	public function quotes()
 	{

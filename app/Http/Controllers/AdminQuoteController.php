@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Quote;
 use App\Models\Movie;
 use Illuminate\Validation\Rule;
+use App\Http\Requests\FormRequest\StoreMovieRequest;
 
 class AdminQuoteController extends Controller
 {
@@ -13,16 +14,11 @@ class AdminQuoteController extends Controller
 		return view('create-quote');
 	}
 
-	public function create()
+	public function create(StoreMovieRequest $request)
 	{
-		$attributes = request()->validate([
-			'title'      => 'required|min:3',
-			'slug'       => 'required',
-			'thumbnail'  => 'required|image',
-		]);
-		$attributes['thumbnail'] = request()->file('thumbnail')->store('thumbnail');
+		$validated = $request->validated();
 
-		Movie::create($attributes);
+		Movie::create($validated);
 
 		return redirect('/');
 	}
