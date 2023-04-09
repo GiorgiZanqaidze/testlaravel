@@ -35,7 +35,7 @@ E Space also gives opportunity to business with giving them **Business Module** 
 ### Getting Started
 1\. First of all you need to clone E Space repository from github:
 ```sh
-git clone https://github.com/e-space1/espace-back.git
+git clone https://github.com/RedberryInternship/giorgi-zanqaidze-movie-quotes
 ```
 
 2\. Next step requires you to run *composer install* in order to install all the dependencies.
