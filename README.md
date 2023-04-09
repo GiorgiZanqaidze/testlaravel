@@ -121,39 +121,25 @@ it will watch JS files and on change it'll rebuild them, so you don't have to ma
 ```bash
 ├─── app
 │   ├─── Console
-│   ├─── Enums
 │   ├─── Exceptions
-│   ├─── Facades
 │   ├─── Http
-│   ├─── Library
-│   │   ├─── Adapters
-│   │   ├─── DataStructures
-│   │   ├─── Entities
-│   │   ├─── Interactors
-│   │   ├─── Presenters
-│   │   │___ Testing
-│   ├─── Nova
 │   ├─── Providers
-│   ├─── Traits
 │   │___ Rules
 │   │... Models
 ├─── bootstrap
 ├─── config
 ├─── database
-├─── nova-components
-├─── nova
+├─── node-modules
 ├─── packages
 ├─── public
 ├─── resources
 ├─── routes
 ├─── scripts
 ├─── storage
-├─── tests
 - .env
 - artisan
 - composer.json
 - package.json
-- phpunit.xml
 ```
 
 Project structure is fairly straitforward(at least for laravel developers)...
