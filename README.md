@@ -1,5 +1,4 @@
 
-
 ---
 E Space Mobile App helps people to find e-car charger nearby and charge their electric cars easily.
 E Space also gives opportunity to business with giving them **Business Module** that gives people opportunity to have their own chargers and to make use of **Business Module** service to manage those chargers: create tariffs, monitor them, have analytical dashboard and more...
@@ -20,7 +19,7 @@ E Space also gives opportunity to business with giving them **Business Module** 
 #
 ### Prerequisites
 
-* <img src="readme/assets/php.svg" width="35" style="position: relative; top: 4px" /> *PHP@7.2 and up*
+* <img src="https://github.com/RedberryInternship/example-project-laravel/raw/master/readme/assets/php.svg" width="35" style="position: relative; top: 4px" /> *PHP@7.2 and up*
 * <img src="readme/assets/mysql.png" width="35" style="position: relative; top: 4px" /> *MYSQL@8 and up*
 * <img src="readme/assets/npm.png" width="35" style="position: relative; top: 4px" /> *npm@6 and up*
 * <img src="readme/assets/composer.png" width="35" style="position: relative; top: 6px" /> *composer@2 and up*
