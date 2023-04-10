@@ -157,6 +157,6 @@ When request hits controller, controller speaks to the one of the **Interactor**
 
 As a result entities solve decomposed tasks and speak back to the interactor and interactor himself responds to the controller and then controller sends back an appropriate response to the user.
 
-[Database Design Diagram](./readme/uml/uml.md "Draw.io")
+[Database Design Diagram]
 
 <a href="https://ibb.co/N2nZVj7"><img src="https://i.ibb.co/N2nZVj7/Movie-quotes-draw-Sql.png" alt="Movie-quotes-draw-Sql"></a>
