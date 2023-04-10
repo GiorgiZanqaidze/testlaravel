@@ -147,16 +147,6 @@ Project structure is fairly straitforward(at least for laravel developers)...
 For more information about project standards, take a look at these docs:
 * [Laravel](https://laravel.com/docs/6.x)
 
-Aside from laravel/nova specific structure here are some of the key points that worth pointing out.
-
-In **app/Library** we have isolated the core project(E Space) functionality concerning heavy calculation, cron jobs and most of the complex procedures that happen on daily bases. 
-For more information about task scheduling in Laravel, please take a look:
-[Laravel - Task Scheduling](https://laravel.com/docs/6.x/scheduling)
-
-When request hits controller, controller speaks to the one of the **Interactor** in the **app/Library/Interactor** folder, which understand the task and with the help of *Entities* in the **app/Library/Entities** this task is decomposed into several small tasks and each of them is assigned to the entity to take care of.
-
-As a result entities solve decomposed tasks and speak back to the interactor and interactor himself responds to the controller and then controller sends back an appropriate response to the user.
-
 [Database Design Diagram]
 
 <a href="https://ibb.co/N2nZVj7"><img src="https://i.ibb.co/N2nZVj7/Movie-quotes-draw-Sql.png" alt="Movie-quotes-draw-Sql"></a>
