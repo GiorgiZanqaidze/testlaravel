@@ -1,4 +1,4 @@
-
+Movie quotes app help people to find random quotes from random movie. They can also see each movie which has related quotes. App has users who can create, delete, and edit movies and quotes.
 
 #
 ### Table of Contents
