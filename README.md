@@ -1,7 +1,4 @@
 
----
-E Space Mobile App helps people to find e-car charger nearby and charge their electric cars easily.
-E Space also gives opportunity to business with giving them **Business Module** that gives people opportunity to have their own chargers and to make use of **Business Module** service to manage those chargers: create tariffs, monitor them, have analytical dashboard and more...
 
 #
 ### Table of Contents
