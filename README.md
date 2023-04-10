@@ -8,6 +8,7 @@ Movie quotes app help people to find random quotes from random movie. They can a
 * [Migrations](#migration)
 * [Development](#development)
 * [Project Structure](#project-structure)
+* [Database Design Diagram](#project-structure)
 
 #
 ### Prerequisites
